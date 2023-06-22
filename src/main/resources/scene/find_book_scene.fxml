@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
+
+<AnchorPane prefHeight="516.0" prefWidth="597.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.control.FindBookController">
+   <children>
+      <Button fx:id="goBackBtn" layoutX="12.0" layoutY="481.0" mnemonicParsing="false" onAction="#goBack" prefHeight="23.0" prefWidth="73.0" style="-fx-background-color: #2C489F; -fx-background-radius: 50;" text="Назад" textFill="WHITE">
+         <font>
+            <Font name="Monospaced Bold" size="12.0" />
+         </font>
+      </Button>
+      <TableView fx:id="table" layoutX="12.0" layoutY="231.0" prefHeight="237.0" prefWidth="572.0">
+         <columns>
+            <TableColumn fx:id="nameCol" prefWidth="284.0" text="Название " />
+            <TableColumn fx:id="authorCol" prefWidth="286.0" text="Автор" />
+         </columns>
+      </TableView>
+      <ScrollPane layoutX="12.0" layoutY="71.0" prefHeight="139.0" prefWidth="237.0">
+         <content>
+            <VBox fx:id="genre" prefHeight="200.0" prefWidth="237.0" />
+         </content>
+      </ScrollPane>
+      <Label fx:id="selectedGenre" alignment="TOP_LEFT" layoutX="278.0" layoutY="71.0" prefHeight="66.0" prefWidth="299.0" text="Выбраный жанр: ">
+         <font>
+            <Font name="Monospaced Bold" size="14.0" />
+         </font></Label>
+      <TextFlow layoutX="13.0" layoutY="23.0" prefHeight="23.0" prefWidth="572.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Запрос на получение по выбранному жанру всех книг и их авторов." wrappingWidth="537.6875">
+               <font>
+                  <Font name="Monospaced Regular" size="14.0" />
+               </font></Text>
+         </children>
+      </TextFlow>
+   </children>
+</AnchorPane>

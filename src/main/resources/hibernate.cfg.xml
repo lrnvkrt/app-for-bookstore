@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD//EN"
+    "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="connection.url">jdbc:postgresql://localhost:5432/bookstore</property>
+    <property name="connection.driver_class">org.postgresql.Driver</property>
+    <property name="connection.username">postgres</property>
+    <property name="connection.password">45dq71</property>
+    <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+    <mapping class="org.example.entity.Employee"/>
+    <mapping class="org.example.entity.EmployeeStatus"/>
+    <mapping class="org.example.entity.EmploymentContract"/>
+    <mapping class="org.example.entity.Store"/>
+      <mapping class="org.example.entity.Delivery"/>
+    <mapping class="org.example.entity.DeliveryItem"/>
+    <mapping class="org.example.entity.Product"/>
+      <mapping class="org.example.entity.MethodOfPayment"/>
+    <mapping class="org.example.entity.Genre"/>
+      <mapping class="org.example.entity.Supplier"/>
+  </session-factory>
+</hibernate-configuration>
